@@ -26,7 +26,6 @@
                 </select>
             </div>
             
-            <!-- Section Configuration du Cristal -->
             <div id="crystal-config" class="menu-section active">
                 <h2 class="section-title">Configuration du Cristal</h2>
                 
@@ -66,16 +65,6 @@
                     </div>
                 </div>
                 
-                <div class="control-group internal-lines-control" id="internal-lines-control">
-                    <label>Lignes intérieures</label>
-                    <button id="toggle-internal-lines">Afficher les lignes intérieures</button>
-                </div>
-                
-                <div class="control-group maille-control" id="maille-control">
-                    <label>Affichage des mailles</label>
-                    <button id="toggle-maille">Afficher les mailles imbriquées</button>
-                </div>
-                
                 <div class="control-group">
                     <label>Vitesse de Rotation</label>
                     <div class="slider-container">
@@ -86,7 +75,6 @@
                 </div>
             </div>
             
-            <!-- Section Plans Réticulaires -->
             <div id="plan-control" class="menu-section">
                 <h2 class="section-title">Plans Réticulaires</h2>
                 
@@ -110,54 +98,11 @@
                         <span id="l-value">1</span>
                     </div>
                     
-                    <div class="slider-container">
-                        <label for="plan-offset">Plan (hkl)<sub>n</sub>:</label>
-                        <input type="range" id="plan-offset" min="0" max="10" step="1" value="0">
-                        <span id="offset-value">0</span>
-                    </div>
-                    
-                    <button id="show-plane">Afficher/Mettre à jour le Plan</button>
+                    <button id="show-plane">Afficher le Plan</button>
                     <button id="hide-plane" class="reset">Masquer le Plan</button>
                 </div>
             </div>
             
-            <!-- Section Projection -->
-            <div id="projection" class="menu-section">
-                <h2 class="section-title">Projection sur Plan</h2>
-                
-                <div class="control-group">
-                    <label>Sélection du Plan de Projection</label>
-                    <select id="projection-offset">
-                        <option value="0">Plan (hkl)₀</option>
-                        <option value="1">Plan (hkl)₁</option>
-                        <option value="2">Plan (hkl)₂</option>
-                        <option value="3">Plan (hkl)₃</option>
-                        <option value="4">Plan (hkl)₄</option>
-                        <option value="5">Plan (hkl)₅</option>
-                        <option value="6">Plan (hkl)₆</option>
-                        <option value="7">Plan (hkl)₇</option>
-                        <option value="8">Plan (hkl)₈</option>
-                        <option value="9">Plan (hkl)₉</option>
-                        <option value="10">Plan (hkl)₁₀</option>
-                    </select>
-                </div>
-                
-                <div class="control-group projection-mode-controls" id="projection-mode-controls">
-                    <label>Mode d'Affichage</label>
-                    <div class="projection-mode-controls">
-                        <button id="show-base-projection" class="active-mode">Base</button>
-                        <button id="show-sites-projection">Sites</button>
-                        <button id="show-all-projection">Tout</button>
-                    </div>
-                </div>
-                
-                <div class="control-group projection-controls">
-                    <button id="show-projection" class="projection">Afficher Projection</button>
-                    <button id="hide-projection" class="reset">Masquer Projection</button>
-                </div>
-            </div>
-            
-            <!-- Section Contrôles de Vue -->
             <div id="view-control" class="menu-section">
                 <h2 class="section-title">Contrôles de Vue</h2>
                 
@@ -165,39 +110,15 @@
                     <label for="view-type">Type de Vue:</label>
                     <select id="view-type">
                         <option value="standard">Standard</option>
-                        <option value="plan-basal">Plan Basal</option>
-                        <option value="edifice">Édifice</option>
                         <option value="axiale">Axiale</option>
                         <option value="diagonale">Diagonale</option>
-                        <option value="cristallographique">Cristallographique</option>
                     </select>
-                </div>
-                
-                <div class="control-group">
-                    <label>Ajustement de l'angle de vue</label>
-                    <div class="angle-controls">
-                        <button id="rotate-left">↶ -5°</button>
-                        <button id="rotate-right">+5° ↷</button>
-                    </div>
-                    <div class="angle-display">
-                        Angle: <span id="current-angle">0</span>°
-                    </div>
                 </div>
                 
                 <div class="control-group">
                     <button id="apply-view">Appliquer la Vue</button>
                     <button id="reset-view">Réinitialiser la Vue</button>
                     <button id="toggle-animation">Animation Rotation</button>
-                </div>
-                
-                <div class="info-panel">
-                    <div class="info-title">Informations sur le Cristal</div>
-                    <div id="crystal-info">
-                        Structure: Cubique Simple<br>
-                        Paramètre de maille: 4.0 Å<br>
-                        Groupe d'espace: Pm-3m<br>
-                        Sites interstitiels: Cubiques
-                    </div>
                 </div>
             </div>
         </div>
@@ -223,7 +144,6 @@
     
     <footer>
         <p>Explorateur de Cristaux - Outil éducatif pour la cristallographie</p>
-        <p>© 2023 - Tous droits réservés</p>
     </footer>
 
     <script src="script.js"></script>
